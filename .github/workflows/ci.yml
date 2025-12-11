@@ -22,6 +22,11 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
+      - name: Install Google Chrome
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y google-chrome-stable
+
       - name: Run test
         run: mvn clean verify
 
